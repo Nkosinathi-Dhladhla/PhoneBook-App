@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Edit Contact</title>
+{% endblock %}
+
+{% block body %}
+<div>
+    <h1>Edit Contact</h1>
+    <form action="/edit/{{contact.id}}" method = "POST">
+        <label for="name">
+        <input type="text" name = "name" id = "name" placeholder="Name" value = "{{contact.name}}">
+        </label>
+        <label for="email">
+        <input type="email" name = "email" id = "email" placeholder="Email" value = "{{contact.email}}">
+        </label>
+        <label for="number">
+        <input type="number" name = "phone" id = "phone" placeholder="Number" value = "{{contact.phone}}">
+        </label>
+        <button type="button" onclick="window.location.href='/'">Cancel</button>
+        <input type="submit" value = "Update Contact">
+    </form>
+</div>
+{% endblock %}

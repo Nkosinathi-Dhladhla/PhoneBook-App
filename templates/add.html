@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Add Contact</title>
+{% endblock %}
+
+{% block body %}
+<div>
+    <h1>Add New Contact</h1>
+    <form action="/add" method = "POST">
+        <label for="name">
+        <input type="text" name = "name" id = "name" placeholder="Name">
+        </label>
+        <label for="email">
+        <input type="email" name = "email" id = "email" placeholder="Email">
+        </label>
+        <label for="number">
+        <input type="number" name = "phone" id = "phone" placeholder="Number">
+        </label>
+        <button type="button" onclick="window.location.href='/'">Cancel</button>
+        <input type="submit" value = "Add Contact">
+    </form>
+</div>
+{% endblock %}
