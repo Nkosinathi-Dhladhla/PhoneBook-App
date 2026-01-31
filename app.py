@@ -60,6 +60,27 @@ def delete_contact(id:int):
     except Exception as e:
         return f"ERROR: {e}"
 
+@app.route("/", methods = ["GET"])
+def seach_contact():
+    search_query = request.args.get("query")
+    if search_query:
+        contacts = MyContacts.query.filter(
+            (MyContacts.name.ilike(f"%{search_query}%")) |
+            (MyContacts.email.ilike(f"%{search_query}%")) |
+            (MyContacts.phone.ilike(f"%{search_query}%"))
+        ).all()
+        show_clear_button = True
+        if not contacts:
+            message = "Contact Not Found"
+            show_clear_button = True
+        else:
+            message = None
+            show_clear_button = True
+    else:
+        contacts = MyContacts.query.all()
+        message = None
+        show_clear_button = False
+    return render_template("index.html", contacts=contacts, message=message, show_clear_button=show_clear_button)
 
 @app.route("/")
 def index():

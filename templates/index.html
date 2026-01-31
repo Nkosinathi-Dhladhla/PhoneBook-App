@@ -5,12 +5,19 @@
 {% endblock %}
 
 {% block body %}
-<form action="/" method="POST">
-    <input type="text" name = "searchBar" id = "searchBar" placeholder="Search contacts by name, email, or phone">
-    <a href="/add"><p>Add New Contact</p></a>
+
+<form action="/" method="GET">
+    <input type="text" name = "query" id = "searchBar" placeholder="Search contacts by name, email, or phone">
+    <input type="submit" value = "Search Contact">
 </form>
+<a href="/add"><p>Add New Contact</p></a>
+{% if message %}
+   <h1>{{ message }}</h1>
+   {% if show_clear_button %}
+<button type="button" onclick="window.location.href='/'">Cancel Search</button>
+   {% endif %}
 <div>
-{% if contacts | length < 1 %}
+{% elif contacts | length < 1 %}
     <h1>There are no contacts added, create one here!</h1>
 {% else %}
     {% for contact in contacts %}
@@ -24,6 +31,9 @@
         <a href="/delete/{{contact.id}}">delete</a>
     </div>
     {% endfor %}
+    {% if show_clear_button %}
+<button type="button" onclick="window.location.href='/'">Cancel Search</button>
+    {% endif %}
  {% endif %}
 </div>
 {% endblock %}
