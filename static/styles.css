@@ -1,3 +1,141 @@
 body{
-    background-color: rgb(222, 255, 255);
+    background-color: #dcebff;
+}
+
+#para1{
+    margin-top: -15px;
+    color:rgb(75, 74, 74);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+form{
+    transform: translateX(3%);
+}
+
+
+#searchBar{
+    width: 82%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+}
+
+#Search{
+    width: 10%;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(181, 210, 253);
+}
+
+.contacter{
+    width: 93%;
+    height: 45px;
+    margin:auto;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(71, 145, 255);
+    color:aliceblue;
+}
+
+a{
+    text-decoration: none;
+}
+
+.ContactsList{
+    width: 90%;
+    height: 120px;
+    background-color: rgb(247, 249, 250);
+    margin: auto;
+    padding-top: 20px;
+    padding-left: 10px;
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.ContactsList:hover{
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+}
+
+.ContactsList h1{
+    font-size: 20px;
+}
+
+
+.Boxers{
+    transform: translateY(15px) translateX(10px);
+}
+
+.Boxers a{
+    margin: 5px;
+}
+
+.Boxers img{
+    width: 30px;
+}
+
+#phoneLogo{
+    width: 30px;
+    height: 30px;
+    transform: translateY(22px);
+}
+
+.divider{
+    display: flex;
+    gap: 15px;
+}
+
+.mover{
+    margin-left: 15px;
+}
+
+fieldset{
+    background-color: aliceblue;
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+}
+
+fieldset input{
+    width: 86%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid black;
+    border-color: rgb(54, 54, 54);
+}
+
+.aligner{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.Adder{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.Adder button{
+    border: 1px solid black;
+    border-color: rgb(54, 54, 54);
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+    background-color: #f7f7f7;
+}
+
+.Adder input{
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(71, 145, 255);
+    color:#dcebff
 }

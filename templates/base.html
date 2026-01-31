@@ -7,8 +7,12 @@
     {% block head %}{% endblock %}
 </head>
 <body>
-    <h1>PhoneBook</h1>
-    <p>Manage your contacts easily!!</p>
+    <div class = "mover">
+        <div class="divider">
+    <img src= "{{ url_for('static', filename='edit-3-svgrepo-com.png') }}" alt="phoneLogo" id = "phoneLogo"><h1 id = "title1">Phone Book</h1>
+        </div>
+    <p id = "para1">Manage your contacts easily!!</p>
+    </div> 
     {% block body %}{% endblock %}
 </body>
 </html>

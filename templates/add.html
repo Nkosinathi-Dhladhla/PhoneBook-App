@@ -6,19 +6,27 @@
 
 {% block body %}
 <div>
-    <h1>Add New Contact</h1>
+    <fieldset>
+        <h1>Add New Contact</h1>
+        <hr>
     <form action="/add" method = "POST">
-        <label for="name">
+        <div class = "aligner">
+        <label for="name">Name</label>
         <input type="text" name = "name" id = "name" placeholder="Name">
-        </label>
-        <label for="email">
+        </div>
+        <div class = "aligner">
+        <label for="email">Email</label>
         <input type="email" name = "email" id = "email" placeholder="Email">
-        </label>
-        <label for="number">
+        </div>
+        <div class = "aligner">
+        <label for="number">Number</label>
         <input type="number" name = "phone" id = "phone" placeholder="Number">
-        </label>
+        </div>
+        <div class = "Adder">
         <button type="button" onclick="window.location.href='/'">Cancel</button>
         <input type="submit" value = "Add Contact">
+        </div>
     </form>
+    </fieldset>
 </div>
 {% endblock %}
