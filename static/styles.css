@@ -336,6 +336,7 @@ fieldset input{
     display: block;
     border-radius: 20px;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .NoContact img{
