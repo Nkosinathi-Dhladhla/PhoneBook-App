@@ -5,6 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
+app.config["SQLALCHEMY_TRACK_MODIFICATION"] = False #This is done so that the database is not saved after deployment every single time 
 db = SQLAlchemy(app)
 
 class MyContacts(db.Model):
@@ -15,6 +16,9 @@ class MyContacts(db.Model):
 
     def __repr__(self):
         return f"<Contact{self.id} - {self.name}>"
+
+with app.app_context():
+        db.create_all()
 
 @app.route("/add", methods=["GET", "POST"])
 def add_contact():
@@ -89,7 +93,5 @@ def index():
 
 
 if __name__ == ("__main__"):
-    with app.app_context():
-        db.create_all()
-
+    
     app.run(debug=True)

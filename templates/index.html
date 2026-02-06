@@ -6,15 +6,20 @@
 
 {% block body %}
 
+<div id = "former">
 <form action="/" method="GET">
-    <div id = "former">
+    <div class = "Wrapper">
     <input type="text" name = "query" id = "searchBar" placeholder="Search contacts by name, email, or phone">
+    </div>
     <button type="submit" id="Search">
     🔍
     </button>
-    </div>
 </form>
-<a href="/add"><button class = "contacter">+Add New Contact</button></a>
+<a href="/add"><button class = "contacter">
+    <img src="{{ url_for('static', filename='add-contact-svgrepo-com.png') }}" alt="addContact">
+    <span>Add Contact</span>
+</button></a>
+</div>
 {% if message %}
    <h1 id = "Contacters">{{ message }}</h1>
    {% if show_clear_button %}
@@ -22,17 +27,26 @@
    {% endif %}
 <div>
 {% elif contacts | length < 1 %}
+<div class = "NoContact">
+    <img src="{{ url_for('static', filename='contact-new-symbolic-svgrepo-com.png') }}" alt="contact">
     <h1>There are no contacts added, create one here!</h1>
+</div>
 {% else %}
     {% for contact in contacts %}
     <div class = "ContactsList">
     <div class = "ContactInfo">
-    <h1>{{contact.name}}</h1>
-    <p>{{contact.phone}}</p>
-    <p>{{contact.email}}</p>
+    <div class = "flexer">
+    <img src="{{ url_for('static', filename='profile-circle-svgrepo-com.png') }}" alt="phoneImg" class = "phoneImg"><h1>{{contact.name}}</h1>
+    </div>
+    <div class = "flexer">
+    <img src="{{ url_for('static', filename='phone-svgrepo-com.png') }}" alt="phoneImg" class = "phoneImg"><p>{{contact.phone}}</p>
+    </div>
+    <div class = "flexer">
+     <img src="{{ url_for('static', filename='email-svgrepo-com.png') }}" alt="phoneImg" class = "phoneImg"><p>{{contact.email}}</p>
+    </div>
     </div>
     <div class = "Boxers">
-        <a href="/edit/{{contact.id}}"><img src="{{ url_for('static', filename='edit-3-svgrepo-com.png') }}" alt="editLogo"></a> 
+        <a href="/edit/{{contact.id}}"><img src="{{ url_for('static', filename='edit-3-svgrepo-com.png') }}" alt="editLogo" id = "editer"></a> 
         <a href="/delete/{{contact.id}}"><img src="{{ url_for('static', filename='trash-alt-svgrepo-com.png') }}" alt="deleteLogo" id = "delete"></a>
     </div>
     </div>

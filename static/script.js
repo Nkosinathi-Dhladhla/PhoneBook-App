@@ -1,9 +1,16 @@
 
 
+
 document.querySelectorAll("#delete").forEach(img =>{
-    img.addEventListener('click', ()=>{
-    alert('Contact Deleted!');
-});
+
+    if(img){
+        img.addEventListener('click', function(e){
+            const confirmed = confirm("Are you sure you want to delete this contact");
+            if (!confirmed){
+                e.preventDefault();
+            }
+        });
+    }
 });
 
 document.querySelector("#editForm").addEventListener('submit', (e)=>{
