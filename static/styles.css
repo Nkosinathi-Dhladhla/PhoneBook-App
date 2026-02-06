@@ -200,6 +200,20 @@ fieldset input{
     text-align: center;
 }
 
+.NoContact1{
+    width: 90%;
+    height: 200px;
+    background-color: #ffffff;
+    color:rgb(141, 141, 141);
+    font-size: 12px;
+    margin: auto;
+    display: block;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 100px;
+}
+
 .NoContact img{
     width: 60px;
 }
