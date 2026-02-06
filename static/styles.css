@@ -55,6 +55,7 @@ a{
     display: flex;
     margin-bottom: 20px;
     border-radius: 20px;
+    padding-right: 10px;
 }
 
 .ContactsList:hover{
@@ -66,8 +67,9 @@ a{
 }
 
 
+
 .Boxers{
-    transform: translateY(15px) translateX(10px);
+    margin-left: auto;
 }
 
 .Boxers a{
@@ -138,4 +140,59 @@ fieldset input{
     height: 40px;
     background-color: rgb(71, 145, 255);
     color:#dcebff
+}
+
+@media(min-width: 768px) {
+    #searchBar{
+    width: 60%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+}
+
+#Search{
+    width: 5%;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(181, 210, 253);
+}
+.contacter{
+    width: 60%;
+    height: 45px;
+    margin:auto;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(71, 145, 255);
+    color:aliceblue;
+}
+#former{
+    text-align: center;
+}
+
+.ContactsList{
+    width: 50%;
+    height: 120px;
+    background-color: rgb(247, 249, 250);
+    margin: auto;
+    padding-top: 20px;
+    padding-left: 10px;
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding-right: 10px;
+}
+
+.mover{
+    text-align: center;
+}
+
+#Contacters{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
 }

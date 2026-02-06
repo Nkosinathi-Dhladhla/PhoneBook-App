@@ -9,22 +9,22 @@
     <fieldset>
         <h1>Add New Contact</h1>
         <hr>
-    <form action="/add" method = "POST">
+    <form action="/add" method = "POST" id="addForm">
         <div class = "aligner">
         <label for="name">Name</label>
-        <input type="text" name = "name" id = "name" placeholder="Name">
+        <input type="text" name = "name" id = "name" placeholder="Name" required>
         </div>
         <div class = "aligner">
         <label for="email">Email</label>
-        <input type="email" name = "email" id = "email" placeholder="Email">
+        <input type="email" name = "email" id = "email" placeholder="Email" required>
         </div>
         <div class = "aligner">
         <label for="number">Number</label>
-        <input type="number" name = "phone" id = "phone" placeholder="Number">
+        <input type="text" name = "phone" id = "phone" placeholder="Number" required>
         </div>
         <div class = "Adder">
-        <button type="button" onclick="window.location.href='/'">Cancel</button>
-        <input type="submit" value = "Add Contact">
+        <button type="button" onclick="window.location.href='/'" >Cancel</button>
+        <input type="submit" value = "Add Contact" id = "AddContact">
         </div>
     </form>
     </fieldset>

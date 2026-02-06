@@ -9,10 +9,11 @@
 <body>
     <div class = "mover">
         <div class="divider">
-    <img src= "{{ url_for('static', filename='edit-3-svgrepo-com.png') }}" alt="phoneLogo" id = "phoneLogo"><h1 id = "title1">Phone Book</h1>
+    <img src= "{{ url_for('static', filename='community-group-leader-svgrepo-com.png') }}" alt="phoneLogo" id = "phoneLogo"><h1 id = "title1">Phone Book</h1>
         </div>
     <p id = "para1">Manage your contacts easily!!</p>
     </div> 
     {% block body %}{% endblock %}
+    <script src = "{{url_for('static', filename='script.js')}}"></script>
 </body>
 </html>

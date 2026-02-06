@@ -6,19 +6,27 @@
 
 {% block body %}
 <div>
+    <fieldset>
     <h1>Edit Contact</h1>
-    <form action="/edit/{{contact.id}}" method = "POST">
-        <label for="name">
-        <input type="text" name = "name" id = "name" placeholder="Name" value = "{{contact.name}}">
-        </label>
-        <label for="email">
-        <input type="email" name = "email" id = "email" placeholder="Email" value = "{{contact.email}}">
-        </label>
-        <label for="number">
-        <input type="number" name = "phone" id = "phone" placeholder="Number" value = "{{contact.phone}}">
-        </label>
+    <hr>
+    <form action="/edit/{{contact.id}}" method = "POST" id = "editForm">
+        <div class = "aligner">
+        <label for="name">Name</label>
+        <input type="text" name = "name" id = "name" placeholder="Name" value = "{{contact.name}}" required>
+        </div>
+        <div class = "aligner">
+        <label for="email">Email</label>
+        <input type="email" name = "email" id = "email" placeholder="Email" value = "{{contact.email}}" required>
+        </div>
+        <div class = "aligner">
+        <label for="number">Phone Number</label>
+        <input type="text" name = "phone" id = "phone" placeholder="Number" value = "{{contact.phone}}" required>
+        </div>
+        <div class = "Adder">
         <button type="button" onclick="window.location.href='/'">Cancel</button>
-        <input type="submit" value = "Update Contact">
+        <input type="submit" value = "Update Contact" id = "update">
+        </div>
     </form>
+    </fieldset>
 </div>
 {% endblock %}

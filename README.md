@@ -16,3 +16,4 @@ This is my very first CRUD app. I built this app as a way to practice how to use
  - SQLAlchemy
  - SQLite
  - HTML/CSS
+ - JavaScript

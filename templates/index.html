@@ -14,9 +14,9 @@
     </button>
     </div>
 </form>
-<a href="/add"><button class = "contacter">Add New Contact</button></a>
+<a href="/add"><button class = "contacter">+Add New Contact</button></a>
 {% if message %}
-   <h1>{{ message }}</h1>
+   <h1 id = "Contacters">{{ message }}</h1>
    {% if show_clear_button %}
 <button type="button" onclick="window.location.href='/'" class = "contacter">Cancel Search</button>
    {% endif %}
@@ -26,14 +26,14 @@
 {% else %}
     {% for contact in contacts %}
     <div class = "ContactsList">
-    <div>
+    <div class = "ContactInfo">
     <h1>{{contact.name}}</h1>
     <p>{{contact.phone}}</p>
     <p>{{contact.email}}</p>
     </div>
     <div class = "Boxers">
         <a href="/edit/{{contact.id}}"><img src="{{ url_for('static', filename='edit-3-svgrepo-com.png') }}" alt="editLogo"></a> 
-        <a href="/delete/{{contact.id}}"><img src="{{ url_for('static', filename='trash-alt-svgrepo-com.png') }}" alt="deleteLogo"></a>
+        <a href="/delete/{{contact.id}}"><img src="{{ url_for('static', filename='trash-alt-svgrepo-com.png') }}" alt="deleteLogo" id = "delete"></a>
     </div>
     </div>
     {% endfor %}
