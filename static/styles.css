@@ -326,6 +326,18 @@ fieldset input{
     text-align: center;
 }
 
+.NoContact1{
+    width: 60%;
+    height: 200px;
+    background-color: #ffffff;
+    color:rgb(141, 141, 141);
+    font-size: 12px;
+    margin: auto;
+    display: block;
+    border-radius: 20px;
+    text-align: center;
+}
+
 .NoContact img{
     width: 60px;
 }
